@@ -51,6 +51,7 @@ export default {
   flex-wrap: wrap;
   margin: 0 auto;
   justify-content: space-between;
+  background-color: lightgrey;
 }
 
 </style>
