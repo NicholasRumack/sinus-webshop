@@ -9,7 +9,7 @@
         <img :src="require('../assets/' + img)" alt="">
         
         <button class="button is-success"
-        @click="addToCart(product)"> {{price}}kr</button>
+        @click="addProductToCart(product)"> {{price}}kr</button>
     </div>
 </div>
 
@@ -25,9 +25,9 @@ export default {
 
     }, 
     methods: {
-/*         addToCart (product){
-            this.$store.dispatch
-        } */
+        addProductToCart (product){
+            this.$store.dispatch('addProductToCart', product)
+        }
     },
 
     props: {
@@ -38,7 +38,9 @@ export default {
         img: String,
     },
     computed: {
-        
+/*         products () {
+            return this.$store.getters.avaiableProducts
+        } */
     },
     data(){return{
        
@@ -71,5 +73,15 @@ img{
     height: 315px;
 }
 
+button{
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  background-color: black;
+  border-radius: 25px;
+  margin-left: 10px;
+  min-width: 122px;
+  max-height: 47px;
+  }
 
 </style>

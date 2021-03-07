@@ -1,6 +1,6 @@
 <template>
 <!-- MODAL -->
-  <div class="single-product">
+  <div v-on:click="isHidden = !isHidden" class="single-product">
     <h1>{{singleProductHeading}}</h1>
     <img src="@/assets/skateboard-greta.png" alt="">
     <p>beskrivning av produkten.
@@ -24,8 +24,10 @@ export default {
          return this.$store.getters.getProductById(this.id)
        }
      },
-     data(){return{
-       id: "870HVE1qIZ4lb3Kf",
+     data() {
+       return{
+/*        id: "870HVE1qIZ4lb3Kf", */
+        isHidden: true
      }}
 }
      
@@ -37,8 +39,6 @@ export default {
 
 .single-product {
   display: grid;
-/*   grid-template-columns: 1fr repeat(4);
-  grid-template-rows: 1fr repeat(4); */
   background-color: white;
   width: 768px;
   height: 508px;
