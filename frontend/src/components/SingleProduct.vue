@@ -1,35 +1,32 @@
 <template>
 <!-- MODAL -->
   <div class="single-product">
-
-    <img src="@/assets/skateboard-greta.png" alt="">
-
     <h1>{{singleProductHeading}}</h1>
+    <img src="@/assets/skateboard-greta.png" alt="">
+    <p>beskrivning av produkten.
+    </p>
 
-    <p>{{longDesc}}</p>
-
-    <p>{{getProductById}}</p>
-
-    <router-link to="/shopCart" class="button">Take my money!</router-link>
+    <p>{{product}}</p>
+<!--870HVE1qIZ4lb3Kf-->
+<!--      <router-link to="/ShopCart" class="button">Take my money!</router-link> -->
+<button>TAKE MY MONEY!</button>
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+
 export default {
     props: {
-        singleProductHeading: String,
-        title: String,
-        price: Number,
-        longDesc: String,
-        imgFile: String,
-        
+        singleProductHeading: String
     }, 
      computed: {
-       ...mapGetters([
-         'getProductById'
-       ])
+       product(){
+         return this.$store.getters.getProductById(this.id)
+       }
      },
+     data(){return{
+       id: "870HVE1qIZ4lb3Kf",
+     }}
 }
      
 </script>
@@ -37,10 +34,11 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
+
 .single-product {
   display: grid;
-  grid-template-columns: 1fr repeat(4);
-  grid-template-rows: 1fr repeat(4);
+/*   grid-template-columns: 1fr repeat(4);
+  grid-template-rows: 1fr repeat(4); */
   background-color: white;
   width: 768px;
   height: 508px;
@@ -58,10 +56,11 @@ p {
 
 }
 img {
-  max-width: 221px;
-  max-height: 315px;
-  grid-row: 1/5;
-  grid-column: 1/3;
+  background: lightgray;
+  max-width: 356px;
+  max-height: 507px;
+  grid-row: 1/4;
+  grid-column: 1/2;
   align-content: bottom;
 
 }
@@ -76,7 +75,8 @@ button{
   min-width: 122px;
   max-height: 47px;
   grid-column: 2/3;
-  grid-row: 4;
+  grid-row: 3/4;
+  margin-bottom: 10px;
   }
 
 </style>

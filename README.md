@@ -28,5 +28,6 @@ Torsdag 4/3
 
 ### Idag ska jag se försöka styla 'hem' där man ser alla produkter på en lång lista. Samt lägga in den infon vi behöver från API:et i dessa. Sedan går jag nog vidare till en produkt själv, dvs när man klickar på en produkt och ska få upp mer info om den. Vad har jag för utmaningar idag? Skulle säga uppdelning och att lyckas få ut API informationen på ett snyggt sätt på 'hem'. Det kommer nog ta tid och vara lite meckigt. Vad jag menar med uppdelning är att jag vill fundera över om det är något ytterligare man kan bryta ut ännu mer eller liknande. Idag är det också dags att uppdatera Trello boarden och lägga in kompletterande information kring User storys.
 
-### Nicholas byggde en bit av styling kring en detaljerad beskrivning av produkten och byggde former för inloggen och registrering men kunde ej pusha pga ingen tillåtelse att pusha. 
+Fredag 5/3
 
+### Lyckades igår att få in produkterna i en flex. Så de skrivs ut i boxar bredvid varandra. För varje produkt. Jag lyckades också få ut en produkt i sig men råkade bara få ut en produkt. Inte flera olika beronde på id. Idag började jag på Login sidan och började fixa iordning så man kan logga in på hemsidan. Det var mycket roligt men mycket svårt. Och hann inte göra klart hela. Gick bäst i början och sedan dalade det. Men det finns iallafall möjlighet att logga in nu och det finns också möjlighet att skapa en user på hemsidan alltså en sign up. Man kan då sedan logga in med den användaren.

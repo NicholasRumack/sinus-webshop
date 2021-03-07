@@ -2,6 +2,10 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Product from '../views/Products.vue'
 import MyAccount from '../views/MyAccount.vue'
+import Cart from '../components/ShopCart.vue'
+import Register from '../views/Register.vue'
+import Checkout from '../views/CheckOut.vue'
+import Login from '../components/LoginForm.vue'
 
 Vue.use(VueRouter)
 
@@ -19,21 +23,25 @@ const routes = [
   {
     path: '/cart',
     name: 'Cart',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../components/ShopCart.vue')
+    component: Cart,
   },
   {
     path: '/register',
     name: 'Register',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Register.vue')
+    component: Register,
   },
   {
     path: '/checkout',
     name: 'Checkout',
-    component: () => import(/* webpackChunkName: "about" */ '../views/CheckOut.vue')
-  }
+    component: Checkout,
+  },
+{
+  path: '/login',
+  name: 'Login',
+  component: Login
+}
+
+
 ]
 
 const router = new VueRouter({

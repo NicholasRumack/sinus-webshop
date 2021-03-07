@@ -1,17 +1,16 @@
 <template>
+
 <div class="wrapper">
-    
-    
     <div class="oneProduct">
-        <p>{{title}} {{price}}kr</p>
-    <h5>{{shortDesc}}</h5>
-    <button class="button is-success"
-        @click="addToCart()">Add to Cart</button>
-</div>
-
-
-
-
+        <p>{{title}}</p>
+    
+        <h5>{{shortDesc}}</h5>
+    
+        <img :src="require('../assets/' + img)" alt="">
+        
+        <button class="button is-success"
+        @click="addToCart(product)"> {{price}}kr</button>
+    </div>
 </div>
 
 </template>
@@ -19,12 +18,16 @@
 
 <script>
 
+
+
 export default {
     components: {
 
     }, 
     methods: {
-        
+/*         addToCart (product){
+            this.$store.dispatch
+        } */
     },
 
     props: {
@@ -32,7 +35,7 @@ export default {
         title: String,
         price: Number,
         shortDesc: String,
-        
+        img: String,
     },
     computed: {
         
@@ -62,6 +65,10 @@ export default {
     width: 35vh;
     height: 40vh;
     
+}
+
+img{
+    height: 315px;
 }
 
 

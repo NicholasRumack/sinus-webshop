@@ -1,8 +1,9 @@
 <template>
 <!-- MODAL -->
-  <div class="shop-cart">
-    <p>{{shopCartHeading}}</p>
+<div class="shop-cart">
     <h1>YOUR CART.</h1>
+    <p>{{shopCartHeading}}</p>
+<div class="items">
     <h2>ITEMS</h2>
     <ul>
       <li></li>  
@@ -10,7 +11,8 @@
       <li></li>  
     </ul> 
     <p>TOTAL</p>   
-
+</div>
+<div class="delivery">
     <h2>DELIVERY</h2>
     <label for="name">Name</label>
     <input type="text">
@@ -20,7 +22,8 @@
     <input type="text">
     <label for="zipCode">Zip Code</label>
     <input type="text">
-
+</div>
+<div class="payment">
     <h2>PAYMENT DETAILS</h2>
     <label for="cardOwner">Card owner</label>
     <input type="text">
@@ -30,14 +33,11 @@
     <input type="numbers">
     <label for="ccv">CCV</label>
     <input type="numbers">
-
+</div>
     <p>
       <router-link to="/checkout">Take my money!</router-link>
-    </p>
-    
-    
-      
-  </div>
+    </p>      
+</div>
 </template>
 
 <script>
@@ -53,13 +53,37 @@ export default {
     ...mapState([
         'products'
 
-      ])
+      ]),
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+.shop-cart {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+
+}
+
+.items {
+  grid-column: 1;
+}
+
+.delivery {
+ grid-column: 2;
+}
+
+.payment {
+  grid-column: 3;
+}
+
+h1 {
+  display: flex;
+  align-self: flex-start;
+}
 
 h2 {
   color: gray;
@@ -80,5 +104,6 @@ input, textarea {
   border-radius: 3px;
   border-width: 1px;
 }
+
 
 </style>

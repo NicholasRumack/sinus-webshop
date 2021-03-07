@@ -4,16 +4,42 @@
       <div class="logo">
         <img src="@/assets/sinus-logo.svg" alt="Logo">
         </div>
+        
         <div class="links">
       <router-link to="/" class="a">Produkter</router-link> 
       <router-link to="/account" class="a">Mitt konto</router-link> 
       <router-link to="/cart" class="a"><img src="@/assets/icon-bag-black.svg" alt=""></router-link>
+      <router-link to="/" class="a" v-if="user" @click="handleClick" >Logga ut</router-link> 
+
     </div></div>
     <router-view/>
+
   </div>
 </template>
 
+<script>
+import {mapGetters} from 'vuex'
 
+export default {
+  components: {
+    
+  },
+  methods: {
+    handleClick(){
+      localStorage.removeItem('token')
+      //this.$store.dispatch('user', null)
+      this.$router.push('/')
+    }
+  },
+  
+    mounted: function(){
+      this.$store.dispatch('loadProducts')
+    },
+    computed: {
+      ...mapGetters(['user'])
+    }
+}
+</script>
 
 <style>
 
@@ -26,19 +52,8 @@
   color: #2c3e50;
 }
 
-#nav {
-  padding: 30px;
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
 
-    &.router-link-exact-active {
-      color: #42b983;
-     
-    }
-  }
-}
 .modal {
   color: red;
 }

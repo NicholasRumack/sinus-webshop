@@ -1,13 +1,8 @@
 <template>
   <div class="logged-in">
-    <p>{{ loggedInHeading }}</p>
-    <h1>Orders</h1>
-    <p>IN PROGRESS</p>
-    <div class="box"></div>
+    <h1>{{ loggedInHeading }}</h1>
     <p>Om användaren är inloggad, kommer här info om kundens konto och orderhistorik.
     </p>
-    <p>DONE</p>
-    <div class="box"></div>
   </div>
 </template>
 
@@ -20,12 +15,6 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
-
-.box {
-  background: white;
-  width: 1064px;
-  height: 159px;
-}
+<style scoped lang="scss">
 
 </style>
