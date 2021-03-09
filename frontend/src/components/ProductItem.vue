@@ -39,7 +39,7 @@ export default {
     },
     computed: {
 /*         products () {
-            return this.$store.getters.avaiableProducts
+            return this.$store.getters.cartProducts
         } */
     },
     data(){return{

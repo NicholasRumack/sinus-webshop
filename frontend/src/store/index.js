@@ -34,7 +34,7 @@ export default new Vuex.Store({
     user(state, user){
       state.user = user; 
   },
-
+/* End of Mutations */
   },
   actions: {
     loadProducts({commit}){
@@ -70,13 +70,14 @@ export default new Vuex.Store({
       dispatch('user', response.data.user)
       
     },
-    
+/* End of Actions */ 
     },
+
+
     getters: {
       user: (state) => {return state.user},
-      getProductById: state => (id) => state.products.find(prod => prod._id == id)
+      getProductById: state => (id) => state.products.find(prod => prod._id == id),
       
-    },
       cartProducts (state) {
         return state.cart.map(cartItem => {
           const product = state.products.find(product => product.id === cartItem.id)
@@ -87,7 +88,9 @@ export default new Vuex.Store({
           }
         })
       }
-    
+    },
+
+/* End of Getters */
   },
   
 )

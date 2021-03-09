@@ -2,29 +2,34 @@
   <div class="logged-in">
     <h1>{{ contactPayFormHeading }}</h1>
 
-       <div class="delivery">
+  <div class="delivery">
     <h2>DELIVERY</h2>
-    <label for="name">Name</label>
-    <input type="text">
-    <label for="streetAdress">Street adress</label>
-    <input type="text">
-    <label for="city">City</label>
-    <input type="text">
-    <label for="zipCode">Zip Code</label>
-    <input type="text">
+      <label for="name">Name</label>
+      <input type="text">
+      <label for="streetAdress">Street adress</label>
+      <input type="text">
+      <label for="city">City</label>
+      <input type="text">
+      <label for="zipCode">Zip Code</label>
+      <input type="text">
 </div>
 <div class="payment">
-    <h2>PAYMENT DETAILS</h2>
-    <label for="cardOwner">Card owner</label>
-    <input type="text">
-    <label for="cardNumber">Card Number</label>
-    <input type="numbers">
-    <label for="validUntil">Valid Until</label>
-    <input type="numbers">
-    <label for="ccv">CCV</label>
-    <input type="numbers">
-</div> 
-  </div>
+  <h2>PAYMENT DETAILS</h2>
+      <label for="cardOwner">Card owner</label>
+      <input type="text">
+      <label for="cardNumber">Card Number</label>
+      <input type="numbers">
+      <label for="validUntil">Valid Until</label>
+      <input type="numbers">
+      <label for="ccv">CCV</label>
+      <input type="numbers">
+    <p>
+      <router-link to="/checkout">Take my money!</router-link>
+    </p>  
+    
+    </div>    
+</div>
+  
 </template>
 
 <script>
